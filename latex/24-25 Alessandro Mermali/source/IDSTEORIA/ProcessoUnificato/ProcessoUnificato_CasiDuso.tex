@@ -1,0 +1,68 @@
+\section{Casi d'Uso}
+\label{concept:casi-duso}
+Un \textbf{Caso D'Uso} (o \textbf{CU} o \textbf{Use Case} o \textbf{UC}) è un insieme di scenari volti al descrivere un'interazione tipica tra un {attore} e il sistema per raggiungere un obiettivo specifico. I casi d'uso rappresentano le funzionalità osservabili dall'esterno e descrivono come il sistema risponde agli input degli attori (\textbf{passività del sistema rispetto all'attore}). Nel contesto del Processo Unificato, i Casi d'Uso sono il principale strumento per la definizione e specifica dei {requisiti} del sistema. 
+\subsection{Come individuare gli attori?}
+\label{individuazione-attori}
+Il primo passo per l'individuazione e definizione dei casi d'uso e l'individuazione degli {attori} che andranno ad attivarli. Un \textbf{attore} rappresenta un ruolo che un'entità può assumere. E' importante notare che un'entità può assumere più ruoli e quindi impersonare più attori. L'individuazione degli attori avviene attraverso una serie di domande relative alle funzioni che il team si pone:
+\begin{itemize}
+    \item Chi/cosa usa il sistema?
+    \item Chi partecipa alle varie fasi del ciclo di vita del sistema?
+    \item Chi ottiene informazioni dal sistema/chi ne fornisce?
+    \item Ci sono funzioni o azioni che vengono eseguite ad intervalli prestabiliti? ($\rightarrow$ Attore Speciale "Tempo") 
+    \item Ci sono eventi che modificano o attivano determinati comportamenti del sistema? Chi ne è responsabile?
+    \item Per ogni funzionalità ideata, chi la usa? Chi la subisce? Chi ne beneficia?
+    \item Esistono ruoli con privilegi diversi all'interno del sistema?
+    \item Chi gestisce il sistema?
+\end{itemize}
+Un attore individuato viene considerato \textbf{valido} se ha una relazione con le funzionalità del sistema, cioè partecipa attivamente o passivamente ai flussi dei casi d'uso. \\
+Una volta definiti, gli attori possono essere divisi in due categorie a seconda della loro relazione col sistema:
+\begin{itemize}
+    \item \textbf{primari}, interagiscono direttamente col sistema e attivano casi d'uso
+    \item \textbf{secondari}, subiscono l'effetto di casi d'uso o ne supportano la realizzazione
+\end{itemize}
+\subsection{Descrizione dei Casi D'Uso}
+\begin{itemize}
+    \item \textbf{formato testuale (breve)}, riepilogo in un solo paragrafo in linguaggio naturale relativo al solo scenario principale
+    \item \textbf{formato testuale (informale)}, più paragrafi indicanti i vari scenari
+    \item \textbf{formato dettagliato}, tutti i passi e le variazioni descritti nel dettaglio, aggiunta di maggiori specifiche
+\end{itemize}
+\subsubsection{Descrizione dettaglia dei Casi D'Uso}
+La descrizione degli UCs segue il seguente formato:
+\begin{itemize}
+    \item \textbf{ID}, identificatore univoco per ogni caso d'uso
+    \item \textbf{Nome}, nome significativo (secondo il formato MoSCoW)
+    \item \textbf{Descrizione}, breve descrizione del Caso d'Uso
+    \item \textbf{Sequenza principale (di successo)}, sequenza di azioni previste per il realizzarsi del caso d'uso
+    \item \textbf{Sequenza alternativa}, eventuali diramazioni o divergenze della sequenza principale
+    \item \textbf{Sequenza d'errore}, sequenze che s'attivano in caso di errore nella sequenza principale
+    \item \textbf{Pre-condizioni}, condizioni necessariamente vere perché il caso d'uso possa essere attivato
+    \item \textbf{Post-condizioni}, condizioni attive una volta terminata la sequenza del caso d'uso
+    \item \textbf{Attori}, attori coinvolti nel caso d'uso
+\end{itemize}
+\subsubsection{Descrizione scenari}
+\label{subsection:scenari}
+La descrizione degli scenari avviene attraverso il linguaggio naturale seguendo questo formato: 
+\begin{center}
+    $<$numero step$>$. $<$Attore$>$$<$azione da compiere$>$
+\end{center}
+Eventuali ramificazioni sono indicate dalla parola "Se":
+\begin{center}
+    $<$numero step$>$. Se $<$condizione$>$ \\
+        $<$numero step$>$.1 $<$azione in caso true$>$ \\
+        $<$numero step$>$.2 $<$azione in caso false$>$
+\end{center}
+E' possibile esprimere cicli usando le parole chiave \textbf{for} e \textbf{while}, esprimendo la condizione in linguaggi naturale, o con dei rimandi ai passi precedenti.
+\begin{center}
+        $<$numero step$>$. Ritorna allo step $<$numero step - 1$>$
+\end{center}
+\subsection{Test degli UC}
+Il livello di granularità dei Casi D'Uso è variabile, per trovare quello più adatto esistono una serie di tecniche di testing per valutare la correttezza del livello di astrazione:
+\begin{itemize}
+    \item \textbf{test del capo}, capire se il dettaglio è rilevante per gli stakeholder di più alto livello
+    \item \textbf{test del processo di business elementare}, verificare che il caso d'uso rappresenti effettivamente un processo completo e rilevante per il contesto di business
+    \item \textbf{test della dimensione}, verificare la dimensione del caso d'uso, cioè se il numero di passi nella sequenza è superiore o inferiore ad una certa soglia (in genere tra i 5 e i 10)
+    \begin{itemize}
+        \item se risulta \textbf{superiore}, bisogna dividere il caso d'uso in più casi d'uso
+        \item se risulta \textbf{inferiore}, potrebbe essere incorporato ad un UC più grande o direttamente omesso
+    \end{itemize}
+\end{itemize}

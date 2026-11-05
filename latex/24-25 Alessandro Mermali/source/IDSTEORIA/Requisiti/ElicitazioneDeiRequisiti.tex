@@ -1,0 +1,70 @@
+\subsection{Elicitazione dei Requisiti}
+\label{elicitazione}
+La seconda fase precedentemente descritta richiedere un maggiore approfondimento. Nella ricerca dei requisiti si può incappare in problemi relativi al linguaggio naturale o a processi mentali quali rimozione, distorsione, generalizzazione. \\
+La scoperta dei requisiti avviene attraverso comunicazione diretta con gli attori, cercando di favorire la comunicazione con un gruppo eterogeneo piuttosto che omogeneo. A tale fine, si selezionando attori provenienti da gruppi divisi per:
+\begin{itemize}
+    \item \textbf{punto di vista}
+    \begin{itemize}
+        \item \textbf{primari}, interagiscono direttamente col sistema e attivano casi d'uso
+        \item \textbf{finali}, l'uso del sistema da parte di terzi realizza i loro obiettivi
+        \item \textbf{di supporto (o secondari)}, offrono un servizio al sistema
+        \item \textbf{fuoriscena}, sono interessati al comportamento del sistema ma non ci interagiscono direttamente.
+    \end{itemize}
+    \item \textbf{ruolo}: persone, sistemi esterni, sensori
+    \item \textbf{interfacce per l'interazione col sistema}
+\end{itemize}
+\subsection{Tecniche di elicitazione}
+Per la scoperta dei requisiti si sfruttano specifiche tecniche. Le principali sono:
+\paragraph{Focus group} Una specifica parte del team approfondisce tematiche del sistema poco chiari.
+\paragraph{Osservazione} Si osservano i potenziali utilizzatori del sistema nello svolgimento delle regolari mansioni.
+\paragraph{Questionari} Viene distribuita agli stakeholder una lista di domande per comprendere concetti specifici.
+\paragraph{Perspective-based Reading} Identificazione e studio di documenti di rilievo per lo sviluppo.
+\paragraph{Intervista} \hyperref[intervista]{Approfondimento.} 
+\paragraph{Workshop} \hyperref[workshop]{Approfondimento.}
+\subsection{Tecniche Accessorie}
+\label{tecniche-accessorie}
+Sono inoltre spesso usate, in combinazione con le tecniche sopra elencate, alcune tecniche accessorie quali:
+\paragraph{Brainstorming} Emersione di idee innovative.
+\paragraph{KJ Method} Brainstorming in contesti con partecipanti eterogenei.
+\hyperref[kjmethod]{Approfondimento.}
+\paragraph{Prototyping} Concretizzazione pragmatica di alcuni aspetti del sistema.
+\paragraph{Mind Mapping} Costruzione di mappe concettuali.
+\paragraph{Elicitation checklist} Lista di tipici aspetti in un particolare contesto applicativo.
+\subsection{Intervista}\label{intervista}
+L'\textbf{Intervista} è una tecnica in cui l'analista dei requisiti conversa con un gruppo di stakeholder per esplorare le sue necessità o aspettative e i vincoli a cui il sistema deve essere soggetto. \\
+Ci sono tre tipi di interviste:
+\begin{itemize}
+    \item \textbf{standardizzate}, con domande chiuse
+    \item \textbf{esplorative}, con domande aperte
+    \item \textbf{destrutturate}, con una conversazione attiva guidata dall'analista
+\end{itemize}
+L'intervista si compone di più fasi:
+\begin{itemize}
+    \item \textbf{preparazione}, definizione delle modalità di intervista, delle domande da porre, delle possibili problematiche e degli obiettivi su cui chiedere chiarimenti, scelta degli intervistati ed individuazione del luogo e del tempo in cui svolgere l'intervista.
+    \item \textbf{esecuzione}, l'effettiva esecuzione dell'intervista, si divide ulteriormente in:
+    \begin{itemize}
+        \item \textbf{apertura}, introduzione di obiettivi e motivazioni
+        \item \textbf{conduzione}, l'analista pone le domande, prende appunti e chiede chiarimenti su risposte poco chiare
+        \item \textbf{chiusura}, riassunto dei punti salienti emersi durante la conduzione
+    \end{itemize}
+    \item \textbf{rielaborazione}, analisi delle risposte raccolte per estrarre requisiti
+\end{itemize}
+La tecnica dell'intervista permette un'esplorazione profonda del punto di vista di uno stakeholder, comprese necessità nascoste o di cui c'è poca consapevolezza. E' però soggetta alla necessità di tempo per l'organizzazione, non garantisce l'individuazione di tutti i possibili requisiti ed è soggetto a bias, tra i quali:
+\begin{itemize}
+    \item \textbf{bias di selezione}, il gruppo selezionato dall'intervistatore potrebbe non avere un'idea completa degli obiettivi o dei limiti del sistema
+    \item \textbf{bias di conferma}, l'intervistatore potrebbe inconsciamente porre domande che riconfermino idee o aspettative già formate
+    \item \textbf{bias di interpretazione}, in fase di rielaborazione potrebbero sorgere ambiguità dovute ad errori di interpretazione
+\end{itemize}
+\subsection{Workshop}\label{workshop}
+Il workshop è una tecnica di elicitazione basata sulla collaborazione tra un gruppo di stakeholder e l'analista. Si divide in tre fasi:
+\begin{itemize}
+    \item \textbf{apertura}, si descrivono obiettivi, regole e possibili tecniche ausiliarie usate
+    \item \textbf{conduzione}, avviene similarmente a quella dell'intervista, ma nel workshop la figura dell'analista viene accompagnata a quella del minute-taker, che trascrive tutto ciò che viene affermato durante la riunione in appunti chiamati "minutes"
+    \item \textbf{chiusura}, stabilita dall'analista, ne segue la raccolta dei risultati
+\end{itemize}
+In seguito alla chiusura, il \textbf{minute-taker} riordina gli appunti presi e richiede feedback dei vari partecipanti al workshop, modificando i risultati a seconda dei loro responsi. \\
+Alla luce di ciò, la principale caratteristica del workshop è la partecipazione attiva di più stakeholder e il confronto diretto tra essi e il minute-taker. Inoltre, permette facilmente di affiancare varie \hyperref[tecniche-accessorie]{tecniche accessorie} e di raccogliere in modo efficace più prospettive, identificando anche eventuali conflitti tra le varie visioni degli stakeholder. D'altro canto, richiede un lavoro maggiore, in quanto è spesso richiesto di filtrare, ordinare ed analizzare idee emerse, oltre che richiedere una disponibilità costante da parte degli stakeholder.
+\subsection{KJ Method}\label{kjmethod}
+Il \textbf{KJ Method} è una tecnica accessoria usata per organizzare e raggruppare un gran numero di idee emerse. La tecnica consiste nella generazione di idee o input individuale (in genere trascritte su oggetti fisici come post-it o note) volte alla risoluzione di una problematica o al raggiungimento di un obiettivo. Una volta terminata la fase di riflessione individuale, le idee vengono esposte e lette dall'intero gruppo, si procede poi per raggruppamento delle idee simili, sintetizzandone con una breve etichetta il contenuto. Si votano i temi più rilevanti, così da darli priorità. \\
+Il KJ Method permette l'emergere di requisiti lasciati implicitati, temi ricorrenti o ritenuti prioritari ed eventuali correlazioni tra esigenze diverse. Richiede, però, che siano disponibili input sufficienti da raggruppare e che sia presente una moderazione per evitare bias in fase di clustering. \\
+Non rappresenta una tecnica di elicitazione completa, ma uno strumento di supporto con cui chiarire ed ordinare idee già emerse.
